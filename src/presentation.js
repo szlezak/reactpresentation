@@ -1,95 +1,58 @@
-// Import React
-import React from 'react';
+import React, { Component } from 'react';
+import createTheme from 'spectacle-theme-nova';
+import { Deck } from 'spectacle';
 
-// Import Spectacle Core tags
-import {
-  BlockQuote,
-  Cite,
-  Deck,
-  Heading,
-  ListItem,
-  List,
-  Quote,
-  Slide,
-  Text,
-} from 'spectacle';
+import Intro from './slides/Intro';
+import About from './slides/About';
+import VirtualDOM from './slides/VirtualDOM';
+import VirtualDOMExample from './slides/VirtualDOMExample';
+import BasicComponent from './slides/Component';
+import ClassComponent from './slides/ClassComponent';
+import FunctionComponent from './slides/FunctionComponent';
+import Props from './slides/Props';
+import State from './slides/State';
+import JSX from './slides/JSX';
+import ES6 from './slides/ES6';
+import Classes from './slides/Classes';
+import Arrow from './slides/Arrow';
+import Const from './slides/Const';
+import Destructuring from './slides/Destructuring';
+import Spread from './slides/Spread';
+import TemplateString from './slides/TemplateString';
+import Thinking from './slides/Thinking';
+import Keep from './slides/Keep';
 
-// Import theme
-import createTheme from 'spectacle/lib/themes/default';
-
-// Require CSS
 require('normalize.css');
 
-const theme = createTheme(
-  {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quaternary: '#CECECE',
-  },
-  {
-    primary: 'Montserrat',
-    secondary: 'Helvetica',
-  }
-);
+const theme = createTheme();
 
-export default class Presentation extends React.Component {
+class Presentation extends Component {
   render() {
     return (
-      <Deck
-        transition={['zoom', 'slide']}
-        transitionDuration={500}
-        theme={theme}
-      >
-        <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
-        </Slide>
+      <Deck theme={theme}>
+        <Intro />
+        <About />
+        <VirtualDOM />
+        <VirtualDOMExample />
+        <BasicComponent />
+        <ClassComponent />
+        <FunctionComponent />
+        <Props />
+        <State />
+        <JSX />
+        <ES6 />
+        <Classes />
+        <Arrow />
+        <Const />
+        <Destructuring />
+        <Spread />
+        <TemplateString />
+        <Thinking />
+        <Keep />
       </Deck>
     );
   }
 }
+
+export default Presentation;
+

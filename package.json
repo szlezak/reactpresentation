@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "spectacle-scripts": "2.3.0"
+    "spectacle-scripts": "2.3.0",
+    "spectacle-theme-nova": "^1.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
